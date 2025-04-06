@@ -1,0 +1,14 @@
+backend:
+  name: github
+  repo: batmanfromkl/7hink-cms  # Replace with your GitHub username and repo name
+media_folder: "static/img"             # Folder where uploaded images will be stored
+public_folder: "/img"                  # How uploaded images are referenced in your site
+collections:
+  - name: "posts"                      # A collection to manage blog posts (example)
+    label: "Posts"
+    folder: "posts"                    # Folder in your repo where posts will live
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
